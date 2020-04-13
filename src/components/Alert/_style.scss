@@ -1,0 +1,75 @@
+.an-alert {
+  position: relative;
+  padding: .9rem;
+  background: #1890ff;
+  width: 28rem;
+  border-radius: .5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.hideTop-true {
+  animation: 1.5s an-alert-animation-top forwards;
+}
+.hideTop-false {
+  animation: 1.5s an-alert-animation-bottom forwards;
+}
+
+@keyframes an-alert-animation-top {
+  0%   {top: 0px;}
+  100% {top: -100px; display: none}
+}
+@keyframes an-alert-animation-left {
+  0%   {left: 0px;}
+  100% {left: -100px; display: none}
+}
+@keyframes an-alert-animation-bottom {
+  0%   {bottom: 0px;}
+  100% {bottom: -100px; display: none}
+}
+@keyframes an-alert-animation-right {
+  0%   {right: 0px;}
+  100% {right: -100px; display: none}
+}
+
+.an-alert-success {
+  @include alert-style($success, $white)
+}
+.an-alert-default {
+  @include alert-style($primary, $white)
+}
+.an-alert-danger {
+  @include alert-style($danger, $white)
+}
+.an-alert-warning {
+  @include alert-style($warning, $white)
+}
+
+.an-alert-header {
+  display: flex;
+  align-items: center;
+}
+.an-alert-header-left {
+  flex: 1;
+  //background-color: #20c997;
+}
+.an-alert-left-title {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+.an-alert-left-content {
+  font-size: .8rem;
+}
+
+.an-alert-header-right {
+  flex: 1;
+  text-align: right;
+  //background-color: #6610f2;
+}
+
+.an-alert-content {
+  padding: .4rem 0 0 0;
+  font-size: .8rem;
+  //background-color: #52c41a;
+}
