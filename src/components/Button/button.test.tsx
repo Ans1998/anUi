@@ -14,8 +14,6 @@ const defaultProps = {
 };
 
 const testProps: ButtonProps = {
-    btnType: ButtonType.Primary,
-    size: ButtonSize.Large,
     className: 'klass'
 };
 
@@ -42,7 +40,7 @@ describe('test Button component', () => {
         expect(element).toHaveClass('an-btn-primary an-btn-lg klass')
     });
     it('should render a link when btnType equals link and href is provided', () => {
-        const wrapper = render(<Button btnType={ButtonType.Link} href='http:www.bdu.com'>Link</Button>);
+        const wrapper = render(<Button btnType="link" href='http:www.bdu.com'>Link</Button>);
         const element = wrapper.getByText('Link');
         expect(element).toBeInTheDocument(); // 判断组件是否在文档中
         expect(element.tagName).toEqual('A');

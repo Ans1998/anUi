@@ -53,7 +53,7 @@ export const Alert:React.FC<BaseAlertProps> = (props) => {
                         // console.log(alertContent);
                         // alertContent.hidden = true;
                     }}>
-                        <Icon icon="window-close"/>
+                        <Icon icon="times" size='lg'/>
                     </div>
                 </div>
                 {
