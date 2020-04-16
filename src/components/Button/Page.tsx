@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 
-import Button, {ButtonSize, ButtonType} from './index'
-
+import Button from './index'
 class ButtonPage extends Component{
-    // constructor(props) {
-    //     super(props);
-    // }
     // 组件渲染之前
     componentWillMount() {
     }
@@ -25,31 +21,31 @@ class ButtonPage extends Component{
                     </div>
                 </div>
                 <div style={{margin: 10}}>
-                    <Button target="_blank" btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Small}> Small-link </Button>
+                    <Button target="_blank" btnType="link" href="http://www.baidu.com" size="sm"> Small-link </Button>
                     <div style={{marginTop: 10}}>
-                        <Button disabled btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Small}> Small-link </Button>
+                        <Button disabled btnType="link" href="http://www.baidu.com" size="sm"> Small-link </Button>
                     </div>
                 </div>
                 <div style={{margin: 10}}>
                     <div style={{marginTop: 10}}>
-                        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}> Primary-Large </Button>
+                        <Button btnType="primary" size="lg"> Primary-Large </Button>
                     </div>
                     <div style={{marginTop: 10}}>
-                        <Button btnType={ButtonType.Primary} size={ButtonSize.Small}> Primary-Small </Button>
+                        <Button btnType="primary" size="sm"> Primary-Small </Button>
                     </div>
                     <div style={{marginTop: 10}}>
-                        <Button disabled btnType={ButtonType.Primary} size={ButtonSize.Small}> Primary-disabled-Small </Button>
+                        <Button disabled btnType="primary" size="sm"> Primary-disabled-Small </Button>
                     </div>
                 </div>
                 <div style={{margin: 10}}>
                     <div style={{marginTop: 10}}>
-                        <Button btnType={ButtonType.Danger} size={ButtonSize.Large}> Danger-Large </Button>
+                        <Button btnType="danger" size="lg"> Danger-Large </Button>
                     </div>
                     <div style={{marginTop: 10}}>
-                        <Button btnType={ButtonType.Danger} size={ButtonSize.Small}> Danger-Small </Button>
+                        <Button btnType="danger" size="sm"> Danger-Small </Button>
                     </div>
                     <div style={{marginTop: 10}}>
-                        <Button disabled btnType={ButtonType.Danger} size={ButtonSize.Small}> Danger-disabled-Small </Button>
+                        <Button disabled btnType="danger" size="sm"> Danger-disabled-Small </Button>
                     </div>
                 </div>
             </div>

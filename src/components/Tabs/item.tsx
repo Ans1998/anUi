@@ -10,7 +10,7 @@ export interface TabItemProps {
 }
 
 export const TabItem: React.FC<TabItemProps> = (props) => {
-    const {index, title, className, children} = props;
+    const {index, title, className} = props;
 
     const context = useContext(TabsContext);
     console.log(context); // 拿到父组件传过来的值

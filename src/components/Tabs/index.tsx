@@ -1,5 +1,4 @@
 import React, {createContext, useState} from "react";
-import classNames from "classnames";
 
 import {TabItemProps} from './item'
 
@@ -21,7 +20,7 @@ export const Tabs:React.FC<TableProps> = (props) => {
 
     const renderChildren = () => {
         return React.Children.map(children, (child, index) => {
-            const childElement = child as React.FunctionComponentElement<TabItemProps> // 获取到dom跟组件属性
+            const childElement = child as React.FunctionComponentElement<TabItemProps>; // 获取到dom跟组件属性
             const { displayName } = childElement.type;
             if (displayName === 'TabItem') {
                 return React.cloneElement(childElement)
