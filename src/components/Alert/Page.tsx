@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Alert, {AlertType} from './index'
+import Alert from './index'
 
 class AlertPage extends Component{
     // constructor(props) {
@@ -19,16 +19,16 @@ class AlertPage extends Component{
         return (
             <div>
                 <div>
-                    <Alert title='提示标题aaa' altType={AlertType.Success}>测试测试测试aaa</Alert>
+                    <Alert title='提示标题aaa' altType="success">测试测试测试aaa</Alert>
                 </div>
                 <div style={{marginTop: 10}}>
-                    <Alert altType={AlertType.Default}>测试测试测试aaa</Alert>
+                    <Alert altType="default">测试测试测试aaa</Alert>
                 </div>
                 <div style={{marginTop: 10}}>
-                    <Alert title='提示标题aaa' altType={AlertType.Danger} duration={2000}>测试测试测试aaa</Alert>
+                    <Alert title='提示标题aaa' altType="danger" duration={2000}>测试测试测试aaa</Alert>
                 </div>
                 <div style={{marginTop: 10}}>
-                    <Alert altType={AlertType.Warning}>测试测试测试aaa</Alert>
+                    <Alert altType="warning">测试测试测试aaa</Alert>
                 </div>
             </div>
         );
