@@ -21,7 +21,7 @@ class MenuPage extends Component{
         return (
             <div style={{margin: 10}}>
                 {/* mode="vertical" defaultOpenSubMenus={['3']} */}
-                <Menu mode="vertical" defaultOpenSubMenus={['3']}  defaultIndex='0' onSelect={(index) => { console.log(index) }}>
+                <Menu mode="vertical" defaultIndex='0' onSelect={(index) => { console.log(index) }}>
                     <MenuItem>aaa1</MenuItem>
                     <MenuItem disabled>aaa2</MenuItem>
                     <MenuItem>aaa3</MenuItem>

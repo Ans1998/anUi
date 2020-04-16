@@ -2,6 +2,9 @@
   .table-li {
     display: flex;
     border-bottom: 2px solid $gray-200;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
     div {
       position: relative;
       padding: 10px;

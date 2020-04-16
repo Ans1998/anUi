@@ -9,11 +9,15 @@
 
 @import "mixin";
 
+@import "animation";
+
 // button
 @import "../components/Button/style";
 // alert
 @import "../components/Alert/style";
 // menu
 @import "../components/Menu/style";
-// table
-@import "../components/Table/style";
+// tabs
+@import "../components/Tabs/style";
+// icon
+@import "../components/Icon/style";
