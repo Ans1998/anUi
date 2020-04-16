@@ -1,0 +1,44 @@
+.an-table-content {
+  .table-li {
+    display: flex;
+    border-bottom: 2px solid $gray-200;
+    div {
+      position: relative;
+      padding: 10px;
+      margin: 0 5px;
+      //background-color: red;
+    }
+    .li {
+      cursor: pointer;
+    }
+    .li:after { /* hover状态下时的底部横线 */
+      content: "";
+      position: absolute; /*关键点： 该元素行对定位于 div*/
+      left: 50%;
+      bottom: -2px;
+      width: 100%;
+      opacity: 0;
+      border-bottom: 2px solid $primary;
+      transform: translate(-50%) scaleX(0);
+      transition: .2s ease-in-out;
+    }
+    .li:hover::after { // 鼠标经过
+      opacity: 1;
+      transform: translate(-50%) scaleX(1);
+    }
+  }
+  .is_active {
+    cursor: default;
+  }
+  .is_active::after{
+    content: "";
+    position: absolute; /*关键点： 该元素行对定位于 div*/
+    left: 50%;
+    bottom: -2px;
+    width: 100%;
+    opacity: 1;
+    border-bottom: 2px solid $primary;
+    transform: translate(-50%) scaleX(1);
+    transition: .2s ease-in-out;
+  }
+}
