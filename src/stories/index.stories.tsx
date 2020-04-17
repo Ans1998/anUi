@@ -1,6 +1,5 @@
 import React from 'react';
 // import { Button } from '@storybook/react/demo';
-import '../styles/index.scss'
 
 export default { title: '首页' };
 

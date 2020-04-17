@@ -1,4 +1,4 @@
-import React, {useContext, useState,FunctionComponentElement} from 'react'
+import React, {FC, useContext, useState,FunctionComponentElement} from 'react'
 import classNames from 'classnames'
 import {MenuContext} from './index'
 import {MenuItemProps} from './item'
@@ -6,12 +6,15 @@ import Icon from "../Icon";
 import Transition from "../Transition";
 
 export interface SubMenuProps {
+    /** subMenu 索引*/
     index ?: string,
+    /** subMenu 标题*/
     title : string,
+    /** subMenu className*/
     className ?: string
 }
 
-const SubMenu:React.FC<SubMenuProps> = ( {index, title, children,className}) => {
+const SubMenu:FC<SubMenuProps> = ( {index, title, children,className}) => {
     const context = useContext(MenuContext);
 
     const openSubMenus = context.defaultOpenSubMenus as Array<string>;
@@ -80,4 +83,4 @@ const SubMenu:React.FC<SubMenuProps> = ( {index, title, children,className}) => 
 };
 SubMenu.displayName = 'SubMenu';
 
-export default SubMenu
+export default SubMenu;

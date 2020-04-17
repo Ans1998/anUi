@@ -2,11 +2,8 @@ import React from 'react';
 
 import { action } from '@storybook/addon-actions'
 import Button from "../components/Button/index"
-import {storiesOf} from "@storybook/react";
+import {storiesOf} from "@storybook/react"
 
-const styles: React.CSSProperties = {
-    textAlign: "center"
-};
 
 const defaultButton = () => {
     return <div style={{margin: 10}}>
@@ -37,7 +34,7 @@ const buttonWithType = () => (
     </div>
 );
 storiesOf('Button 组件', module)
-    .add('默认 Button', defaultButton)
+    .add('Button', defaultButton)
     .add('不同尺寸 Button', buttonWithSize)
     .add("不同type Button", buttonWithType)
 ;

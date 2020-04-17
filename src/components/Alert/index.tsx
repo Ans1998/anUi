@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import classNames from "classnames";
 import Icon from "../Icon";
 import Transition from "../Transition";
@@ -14,14 +14,18 @@ export type AlertType = 'success' | 'default' | 'danger' | 'warning'
 
 
 interface BaseAlertProps {
+    /** alert 类型 */
     altType ?: AlertType;
+    /** alert 标题 */
     title ?: String,
+    /** alert 显示时间 */
     duration ?: number,
     className ?: string,
+    /** alert 内容 */
     children: React.ReactNode;
 }
 
-export const Alert:React.FC<BaseAlertProps> = (props) => {
+export const Alert:FC<BaseAlertProps> = (props) => {
     const {altType, title, duration = 3000, className, children} = props;
     const [showAlert, setShowAlert] = useState(true);
 
@@ -32,11 +36,11 @@ export const Alert:React.FC<BaseAlertProps> = (props) => {
 
     console.log(duration);
 
-    // let time = setTimeout(() => {
-    //     // console.log('定时器执行');
-    //     setShowAlert(false);
-    //     clearTimeout(time);
-    // }, duration);
+    let time = setTimeout(() => {
+        // console.log('定时器执行');
+        setShowAlert(false);
+        clearTimeout(time);
+    }, duration);
 
     return (
         <Transition in={showAlert} timeout={300} animation="zoom-in-top" wrapper>

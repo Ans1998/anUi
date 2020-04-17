@@ -1,15 +1,21 @@
-import React, {createContext, useState} from 'react'
+import React, {FC, createContext, useState} from 'react'
 import classNames from 'classnames'
 import {MenuItemProps} from './item'
 
 type MenuMode = "horizontal" | "vertical"
 type SelectCallback = (selectIndex: string) => void
 export interface MenuProps {
+    /** menu index */
     defaultIndex ?: string,
+    /**menu className*/
     className ?: string,
+    /**menu 类型*/
     mode ?: MenuMode,
+    /**menu 样式*/
     style ?: React.CSSProperties,
+    /**menu 点击事件*/
     onSelect ?: SelectCallback,
+    /**menu 展开子菜单*/
     defaultOpenSubMenus ?: string[]
 }
 interface IMenuContext {
@@ -21,7 +27,7 @@ interface IMenuContext {
 // 跨组件传上下文
 export const MenuContext = createContext<IMenuContext>({ index: '0' });
 
-const Menu: React.FC<MenuProps> = (props) => {
+const Menu: FC<MenuProps> = (props) => {
     const { className, mode, style, children, defaultIndex, onSelect, defaultOpenSubMenus} = props;
 
     const [currentActive, setActive] = useState(defaultIndex);
@@ -72,4 +78,4 @@ Menu.defaultProps = {
     defaultOpenSubMenus: []
 };
 
-export default Menu
+export default Menu;

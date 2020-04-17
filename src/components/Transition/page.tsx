@@ -3,6 +3,11 @@ import React from 'react';
 import Button from '../Button/index'
 import Transition from "./index";
 
+/**
+ *  ~~~js
+ *  type AnimationName = 'zoom-in-top' | 'zoom-in-left' | 'zoom-in-bottom' | 'zoom-in-right'
+ *  ~~~
+ */
 class TransitionPage extends React.Component{
     state = {
         show: false
@@ -21,12 +26,8 @@ class TransitionPage extends React.Component{
             <div style={{margin: 10}}>
                 <div>
                     <Button size="lg" onClick={() => {
-                        this.setState(
-                            {
-                                show: !this.state.show
-                            }
-                        )
-                    }}>Toggle</Button>
+                        this.test()
+                    }}>Toggle-left</Button>
                 </div>
                 <div>
                     <Transition in={this.state.show} timeout={300} animation="zoom-in-left">
@@ -44,6 +45,13 @@ class TransitionPage extends React.Component{
                 </div>
             </div>
         );
+    }
+    test() {
+        this.setState(
+            {
+                show: !this.state.show
+            }
+        )
     }
 }
 export default TransitionPage;

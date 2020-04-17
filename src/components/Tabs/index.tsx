@@ -1,9 +1,11 @@
-import React, {createContext, useState} from "react";
+import React, {FC, createContext, useState} from "react";
 
 import {TabItemProps} from './item'
 
 interface TableProps {
+    /** tabs index*/
     defaultIndex: number,
+    /** tabs 点击事件*/
     onSelect:  (selectIndex: number) => void
 }
 interface ITabsContext {
@@ -13,7 +15,7 @@ interface ITabsContext {
 // 跨组件传上下文
 export const TabsContext = createContext<ITabsContext>({ index: 0 });
 
-export const Tabs:React.FC<TableProps> = (props) => {
+export const Tabs:FC<TableProps> = (props) => {
     const {defaultIndex, onSelect, children} = props;
 
     const [currentActive, setActive] = useState(defaultIndex);

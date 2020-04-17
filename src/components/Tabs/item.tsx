@@ -1,15 +1,18 @@
-import React, {useContext} from "react";
+import React, {FC, useContext} from "react";
 import classNames from "classnames";
 
 import {TabsContext} from "./index";
 
 export interface TabItemProps {
+    /** tabsItem key */
     index: number,
+    /** tabsItem 标题 */
     title: string,
+    /** tabsItem className */
     className ?: string,
 }
 
-export const TabItem: React.FC<TabItemProps> = (props) => {
+export const TabItem: FC<TabItemProps> = (props) => {
     const {index, title, className} = props;
 
     const context = useContext(TabsContext);
@@ -35,4 +38,4 @@ export const TabItem: React.FC<TabItemProps> = (props) => {
 };
 TabItem.displayName = "TabItem";
 
-export default TabItem
+export default TabItem;
